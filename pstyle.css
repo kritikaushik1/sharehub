@@ -1,0 +1,249 @@
+/* ===== ShareHub Profile Page Styling ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary: #5b9df9;
+  --secondary: #b8e1ff;
+  --accent: #79c7f9;
+  --light-bg: #f4f8fb;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: var(--light-bg);
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background: var(--white);
+  box-shadow: 0 4px 20px var(--shadow);
+  border-radius: 0 0 20px 20px;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--primary) !important;
+  letter-spacing: 0.5px;
+}
+
+.navbar .btn {
+  font-weight: 500;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.navbar .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px var(--shadow);
+}
+
+/* ===== Profile Header ===== */
+.profile-header {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 20px;
+  color: var(--white);
+  padding: 50px 25px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(91, 157, 249, 0.3);
+  overflow: hidden;
+}
+
+.profile-header::before {
+  content: "";
+  position: absolute;
+  width: 180%;
+  height: 180%;
+  top: -40%;
+  left: -40%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+  animation: floatLight 10s infinite linear;
+}
+
+@keyframes floatLight {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--white);
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+#profile-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+#profile-email {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.badge-custom {
+  background: var(--white);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+#edit-profile-btn {
+  background: var(--white);
+  color: var(--primary);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 15px;
+  font-weight: 500;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: 0.3s;
+}
+
+#edit-profile-btn:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+/* ===== Stats Section ===== */
+.stats {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 20px 10px;
+  box-shadow: 0 4px 20px var(--shadow);
+  margin-top: -20px;
+}
+
+.stats .col {
+  border-right: 1px solid #e0e0e0;
+}
+
+.stats .col:last-child {
+  border-right: none;
+}
+
+.stats h6 {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.stats p {
+  font-size: 1.3rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+/* ===== About Section ===== */
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h5 {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ===== My Items and Bookings ===== */
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary);
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+.card img {
+  height: 190px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.btn-delete {
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ===== Modal Styling ===== */
+.modal-content {
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.modal-header {
+  background: var(--primary);
+  color: white;
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-footer .btn-primary {
+  background: var(--primary);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+}
+
+.modal-footer .btn-primary:hover {
+  background: var(--accent);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: var(--white);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin-top: 60px;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}

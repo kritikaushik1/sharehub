@@ -1,0 +1,29 @@
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+}
+
+#login-page input:focus {
+  box-shadow: 0 0 5px rgba(99, 102, 241, 0.5);
+  border-color: #6366f1;
+}
+
+#login-btn {
+  background-color: #6366f1;
+  border: none;
+}
+#login-btn:hover {
+  background-color: #4f46e5;
+}
+body {
+  margin: 0;
+  padding-bottom: 70px; /* keeps space for fixed footer */
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+   background-color: #3588e1;
+  color: white;
+}
